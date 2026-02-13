@@ -1,0 +1,229 @@
+/* ===== General Body Layout ===== */
+body {
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    height: 100vh;             
+    margin: 0;                 
+    font-family: Arial, sans-serif;
+    background-color: #ffebee; /* light red background */
+}
+
+/* ===== Main Container ===== */
+.container {
+    text-align: center;
+    background-color: #ffcccc;  /* soft red instead of pink */
+    border: 2px solid #b71c1c;  /* dark red border */
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.container button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Yes button - red */
+#btnYes {
+    background-color: #e53935;
+    color: white;
+}
+
+#btnYes:hover {
+    background-color: #c62828;
+    transform: scale(1.08);
+}
+
+/* No button - gray */
+#btnNo {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+#btnNo:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.08);
+}
+
+/* ===== Modals ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid #888;
+}
+
+/* ===== Success Modal Video ===== */
+
+#successModal video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* ===== Confirmation Modal (Red Warning Style) ===== */
+#confirmationModal .modal-content {
+    width: 400px;
+    padding: 20px 30px;
+    border: 3px solid #e53935;       /* bold red border */
+    background-color: #fff;           /* white background */
+    color: #000;                      /* black text */
+    text-align: center;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Exclamation icon at top */
+#confirmationModal .modal-content::before {
+    content: "⚠️";
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #e53935;
+}
+
+/* Heading */
+#confirmationModal .modal-content p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Message */
+#confirmationModal .modal-content p:last-child {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Button group */
+#confirmationModal .button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Yes / Cancel buttons */
+#confirmationModal #confirmYes,
+#confirmationModal #confirmCancel {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Yes button - red */
+#confirmationModal #confirmYes {
+    background-color: #e53935;
+    color: white;
+}
+
+#confirmationModal #confirmYes:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* Cancel button - gray */
+#confirmationModal #confirmCancel {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+#confirmationModal #confirmCancel:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* ===== Fullscreen Notice Modal ===== */
+#fullscreenNotice .modal-content {
+    font-size: 18px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #e53935;
+}
+
+/* ===== Undo Button (BSOD) ===== */
+#undoChoice {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #333;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 0; /* rectangle */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#undoChoice:hover {
+    background-color: #555;
+    transform: scale(1.03);
+}
+
+/* ===== BSOD Container ===== */
+.bsod-container {
+    display: none;
+    background-color: #0078d7;
+    color: white;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    padding: 100px;
+    text-align: left;
+    z-index: 10000;
+    box-sizing: border-box;
+}
+
+.bsod-container.show {
+    display: block;
+}

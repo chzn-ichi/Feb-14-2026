@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Please go on a date with me!</h1>
+        <button id="btnYes">Yes</button>
+        <button id="btnNo">No</button>
+    </div>
+
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <p style="font-size: 26px"><b>Are you sure?</b></p>
+        <p style="margin-top: 2px">By continuing this step, your system32 will be deleted.</p>
+        <div class="button-group">
+            <button id="confirmYes">Yes</button>
+            <button id="confirmCancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+
+    <div id="fullscreenNotice" class="modal">
+        <div class="modal-content">
+            <p>Press <strong>F11</strong> to proceed with deletion...</p>
+        </div>
+    </div>
+
+
+
+    <div id="bsod" class="bsod-container">
+        <p>:( Your PC ran into a problem and needs to restart.</p>
+        <p>Error: VALENTINES_REJECTION_FAILURE</p>
+        <button id="undoChoice">Sige nalang</button>
+    </div>
+
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeSuccess">&times;</span>
+        <!-- Video behaves like GIF -->
+        <video id="valentineVideo" width="100%" autoplay loop muted playsinline>
+            <source src="love-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<!-- Optional audio file -->
+<audio id="valentineAudio" src="love-audio.mp3"></audio>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
