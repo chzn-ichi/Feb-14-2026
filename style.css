@@ -227,3 +227,15 @@ body {
 .bsod-container.show {
     display: block;
 }
+
+/* ===== Footer ===== */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: #777;
+    font-family: Arial, sans-serif;
+    user-select: none;
+}
